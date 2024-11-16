@@ -19,7 +19,7 @@ public class APODService {
         try {
             // Read JSON data from the file and map it to a list of Item objects
             ObjectMapper objectMapper = new ObjectMapper();
-            APOD apod = objectMapper.readValue(new File("src/main/resources/consolidated.json"),
+            APOD apod = objectMapper.readValue(new File("service/src/main/resources/consolidated.json"),
                     objectMapper.getTypeFactory().constructType(APOD.class));
             items = new ArrayList<>();
             items.addAll(apod.getApod());
